@@ -1,5 +1,5 @@
 # Aplikace Kuchyně
-# Tým Můži v ohni
+# Tým "Můži v ohni"
 * Bangova Robina
 * Břenek Radim
 * Koutecký Oldřich
@@ -7,10 +7,10 @@
 ## Popis
 Aplikace slouží pro správu receptů, potřebných surovin, skladových zásob, plánování jídel a nákupů surovin.
 ## Aktéři
-*	Správce 
-*	Uživatel 
-Správce má za úkol správu skladu, plánovaní jídel, kalkulace surovin, nákup surovin a evidenci receptu - zobrazení, správu a zrušení receptu.
-## Vstupné podmínky:
+*	Správce, má za úkol správu skladu, plánovaní jídel, kalkulace surovin, nákup surovin a evidenci receptu - zobrazení, správu a zrušení receptu. 
+*	Uživatel, smí zobrazodat informace 
+Správce 
+## Vstupní podmínky:
 * software 
 * hardware
 * správný chod aplikace
@@ -21,7 +21,8 @@ Správce má za úkol správu skladu, plánovaní jídel, kalkulace surovin, ná
 4.	Suroviny se dodávají na sklad. 
 5.	Sklad je spravovaný správcem. 
 6.	Správce spravuje recepty. 
-Pro vytvoření receptu je nutná kalkulace surovin a další krok, nákup surovin. Tyhle akce sú zajišťovány správou surovin, plánovaním jídel. Úkoly má na starosti správce. V dalším kroku se vytvářejí recepty. Je potřeba zkontrolovat, či suroviny byli správně naplánované. Uživatel, si pak recepty může zobrazit. Jestli nastane chyba, je možné správou zrušit recept. Je potřeba zkontrolovat, zda suroviny byly správně naplánované. Uživatel si pak recepty může zobrazit. Pokud nastane chyba, je možné správou zrušit recept.
+
+Pro vytvoření receptu je nutná kalkulace surovin a další krok, nákup surovin. Tyto akce jsou zajišťovány správou surovin, plánovaním jídel. Úkoly má na starosti správce. V dalším kroku se vytvářejí recepty. Je potřeba zkontrolovat, či suroviny byli správně naplánované. Uživatel, si pak recepty může zobrazit. Jestli nastane chyba, je možné správou zrušit recept. Je potřeba zkontrolovat, zda suroviny byly správně naplánované. Uživatel si pak recepty může zobrazit. Pokud nastane chyba, je možné správou zrušit recept.
 *	Nákup surovin 
 *	Plánovaní jídal 
 *	Plánování surovin 
