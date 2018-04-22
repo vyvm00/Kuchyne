@@ -1,6 +1,10 @@
 # Aplikace Kuchyně
-
-## Popis:
+# Tým Můži v ohni
+* Radim Břenek
+* Martin vyvadil
+* Oldřich Koutecký
+* Robina Bangova
+## Popis
 
 Aplikace slouží pro správu receptů, potřebných surovin, skladových zásob, plánování jídel a nákupů surovin.
 
