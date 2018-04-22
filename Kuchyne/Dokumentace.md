@@ -8,8 +8,7 @@
 Aplikace slouží pro správu receptů, potřebných surovin, skladových zásob, plánování jídel a nákupů surovin.
 ## Aktéři
 *	Správce, má za úkol správu skladu, plánovaní jídel, kalkulace surovin, nákup surovin a evidenci receptu - zobrazení, správu a zrušení receptu. 
-*	Uživatel, smí zobrazodat informace 
-Správce 
+*	Uživatel, smí zobrazodat informace
 ## Vstupní podmínky:
 * software 
 * hardware
