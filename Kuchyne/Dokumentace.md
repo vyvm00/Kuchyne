@@ -1,4 +1,4 @@
-# Tým "Můži v ohni"   - Aplikace Kuchyně
+# Tým "Muži v ohni"   - Aplikace Kuchyně
 * Bangova Robina
 * Břenek Radim
 * Koutecký Oldřich
