@@ -1,37 +1,27 @@
 # Aplikace Kuchyně
 # Tým Můži v ohni
-* Radim Břenek
-* Martin vyvadil
-* Oldřich Koutecký
-* Robina Bangova
+* Bangova Robina
+* Břenek Radim
+* Koutecký Oldřich
+* Vyvadil Martin
 ## Popis
-
 Aplikace slouží pro správu receptů, potřebných surovin, skladových zásob, plánování jídel a nákupů surovin.
-
 ## Aktéři
-
 *	Správce 
 *	Uživatel 
-
 Správce má za úkol správu skladu, plánovaní jídel, kalkulace surovin, nákup surovin a evidenci receptu - zobrazení, správu a zrušení receptu.
-
 ## Vstupné podmínky:
-
 * software 
 * hardware
 * správný chod aplikace
-
 ## Tok:
-
 1.	Správce naplánuje jídla a následně přidá recepty. 
 2.	Jídla se zkladají se surovin. 
 3.	Sklad obsahuje suroviny. 
 4.	Suroviny se dodávají na sklad. 
 5.	Sklad je spravovaný správcem. 
 6.	Správce spravuje recepty. 
-
 Pro vytvoření receptu je nutná kalkulace surovin a další krok, nákup surovin. Tyhle akce sú zajišťovány správou surovin, plánovaním jídel. Úkoly má na starosti správce. V dalším kroku se vytvářejí recepty. Je potřeba zkontrolovat, či suroviny byli správně naplánované. Uživatel, si pak recepty může zobrazit. Jestli nastane chyba, je možné správou zrušit recept. Je potřeba zkontrolovat, zda suroviny byly správně naplánované. Uživatel si pak recepty může zobrazit. Pokud nastane chyba, je možné správou zrušit recept.
-
 *	Nákup surovin 
 *	Plánovaní jídal 
 *	Plánování surovin 
@@ -40,10 +30,7 @@ Pro vytvoření receptu je nutná kalkulace surovin a další krok, nákup surov
 *	vytváření receptů 
 *	Zobrazení receptů 
 *	Zrušit recepty 
-
-
 ## Podmínky pro dokončení:
-
 Propojení s datbází 
 ## Nákresy oken aplikace
 ![nákresy oken aplikace, GUI](https://raw.githubusercontent.com/kouo00/obrazky/master/nakres.png)
