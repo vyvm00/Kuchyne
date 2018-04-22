@@ -41,8 +41,11 @@ Pro vytvoření receptu je nutná kalkulace surovin a další krok, nákup surov
 ## Podmínky pro dokončení:
 
 Propojení s datbází 
-
+## Nákresy oken aplikace
 ![nákresy oken aplikace, GUI](https://raw.githubusercontent.com/kouo00/obrazky/master/nakres.png)
+## UseCase Diagram
 ![useCase diagram](https://raw.githubusercontent.com/kouo00/obrazky/master/useCase.png)
-![useCase diagram](https://raw.githubusercontent.com/kouo00/obrazky/master/classDiagram.png)
-![useCase diagram](https://raw.githubusercontent.com/kouo00/obrazky/master/database.png)
+## Class Diagram
+![class diagram](https://raw.githubusercontent.com/kouo00/obrazky/master/classDiagram.png)
+## Konceptuální model databáze
+![database](https://raw.githubusercontent.com/kouo00/obrazky/master/database.png)
