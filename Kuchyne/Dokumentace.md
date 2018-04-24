@@ -122,17 +122,17 @@ Pro kontrolu konvencí můžete použít program PMD.
 ## Nákresy oken aplikace
 ![nákresy oken aplikace, GUI](https://raw.githubusercontent.com/kouo00/obrazky/master/nakres.png)
 ## Scénáře
-![database](https://raw.githubusercontent.com/kouo00/obrazky/master/1.png)
-![database](https://raw.githubusercontent.com/kouo00/obrazky/master/2.png)
-![database](https://raw.githubusercontent.com/kouo00/obrazky/master/3.png)
-![database](https://raw.githubusercontent.com/kouo00/obrazky/master/4.png)
-![database](https://raw.githubusercontent.com/kouo00/obrazky/master/5png)
-![database](https://raw.githubusercontent.com/kouo00/obrazky/master/6.png)
-![database](https://raw.githubusercontent.com/kouo00/obrazky/master/7.png)
-![database](https://raw.githubusercontent.com/kouo00/obrazky/master/8.png)
-![database](https://raw.githubusercontent.com/kouo00/obrazky/master/9.png)
-![database](https://raw.githubusercontent.com/kouo00/obrazky/master/10.png)
-![database](https://raw.githubusercontent.com/kouo00/obrazky/master/11.png)
+![1](https://raw.githubusercontent.com/kouo00/obrazky/master/1.png)
+![2](https://raw.githubusercontent.com/kouo00/obrazky/master/2.png)
+![3](https://raw.githubusercontent.com/kouo00/obrazky/master/3.png)
+![4](https://raw.githubusercontent.com/kouo00/obrazky/master/4.png)
+![5](https://raw.githubusercontent.com/kouo00/obrazky/master/5png)
+![6](https://raw.githubusercontent.com/kouo00/obrazky/master/6.png)
+![7](https://raw.githubusercontent.com/kouo00/obrazky/master/7.png)
+![8](https://raw.githubusercontent.com/kouo00/obrazky/master/8.png)
+![9](https://raw.githubusercontent.com/kouo00/obrazky/master/9.png)
+![10](https://raw.githubusercontent.com/kouo00/obrazky/master/10.png)
+![11](https://raw.githubusercontent.com/kouo00/obrazky/master/11.png)
 
 Poznámka: 
 Všechny výše zmíněné návrhy v průběhu zpracovávání semestrální práce mohou variovat a výsledný výstup se může v některých oblastech lišit od plánu.
