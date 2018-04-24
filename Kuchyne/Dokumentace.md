@@ -14,6 +14,18 @@ Aplikace slouží pro správu receptů, potřebných surovin, skladových zásob
 *	Uživatel (v praxi kuchař či servírka) – smí pouze zobrazovat informace o skladových zásobách, receptech, surovinách a plánovaných jídlech.
 ### UseCase Diagram
 ![useCase diagram](https://raw.githubusercontent.com/kouo00/obrazky/master/useCase.png)
+## Scénáře
+![1](https://raw.githubusercontent.com/kouo00/obrazky/master/1.png)
+![2](https://raw.githubusercontent.com/kouo00/obrazky/master/2.png)
+![3](https://raw.githubusercontent.com/kouo00/obrazky/master/3.png)
+![4](https://raw.githubusercontent.com/kouo00/obrazky/master/4.png)
+![5](https://raw.githubusercontent.com/kouo00/obrazky/master/5png)
+![6](https://raw.githubusercontent.com/kouo00/obrazky/master/6.png)
+![7](https://raw.githubusercontent.com/kouo00/obrazky/master/7.png)
+![8](https://raw.githubusercontent.com/kouo00/obrazky/master/8.png)
+![9](https://raw.githubusercontent.com/kouo00/obrazky/master/9.png)
+![10](https://raw.githubusercontent.com/kouo00/obrazky/master/10.png)
+![11](https://raw.githubusercontent.com/kouo00/obrazky/master/11.png)
 ## Tok:
 1.	Správce vytvoří/přidá suroviny a z nich následně sestaví recepty
 2.	Z receptů může správce vytvořit jídla
@@ -121,18 +133,6 @@ Příklad:
 Pro kontrolu konvencí můžete použít program PMD.
 ## Nákresy oken aplikace
 ![nákresy oken aplikace, GUI](https://raw.githubusercontent.com/kouo00/obrazky/master/nakres.png)
-## Scénáře
-![1](https://raw.githubusercontent.com/kouo00/obrazky/master/1.png)
-![2](https://raw.githubusercontent.com/kouo00/obrazky/master/2.png)
-![3](https://raw.githubusercontent.com/kouo00/obrazky/master/3.png)
-![4](https://raw.githubusercontent.com/kouo00/obrazky/master/4.png)
-![5](https://raw.githubusercontent.com/kouo00/obrazky/master/5png)
-![6](https://raw.githubusercontent.com/kouo00/obrazky/master/6.png)
-![7](https://raw.githubusercontent.com/kouo00/obrazky/master/7.png)
-![8](https://raw.githubusercontent.com/kouo00/obrazky/master/8.png)
-![9](https://raw.githubusercontent.com/kouo00/obrazky/master/9.png)
-![10](https://raw.githubusercontent.com/kouo00/obrazky/master/10.png)
-![11](https://raw.githubusercontent.com/kouo00/obrazky/master/11.png)
 
 Poznámka: 
 Všechny výše zmíněné návrhy v průběhu zpracovávání semestrální práce mohou variovat a výsledný výstup se může v některých oblastech lišit od plánu.
