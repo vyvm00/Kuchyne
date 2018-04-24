@@ -79,23 +79,23 @@ Propojení s datbází
 Příklad:
 
  /**
- *  Třída SeznamAkci - obsahuje seznam přípustných příkazů adventury.
- *  Používá se pro rozpoznávání jednotlivých příkazů.
- *
- *  Tato třída je součástí jednoduché textové hry.
- *
- *@author     Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova
- *@version    4.0
- *@created    září 2006
- */
+ **  Třída SeznamAkci - obsahuje seznam přípustných příkazů adventury.
+ **  Používá se pro rozpoznávání jednotlivých příkazů.
+ **
+ **  Tato třída je součástí jednoduché textové hry.
+ **
+ **@author     Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova
+ **@version    4.0
+ **@created    září 2006
+ **/
 3.2 Před každou metodou by měl být její popis doplněný o popis významu jednotlivých parametrů a návratových hodnot. Příklad:
 
  /**
- * Metoda hledá nejvyšší hodnotu (maximum) v poli celých čísel.
- *
- *@param pole Pole celých čísel, které se bude prohledávat
- *@return Vrací celé číslo s nejvyšší hodnotou
- */
+ ** Metoda hledá nejvyšší hodnotu (maximum) v poli celých čísel.
+ **
+ **@param pole Pole celých čísel, které se bude prohledávat
+ **@return Vrací celé číslo s nejvyšší hodnotou
+ **/
 3.3 Popisy tříd a metod by měly být ve formátu vhodném pro javadoc.
 
 3.4 Vlastní kód doplňte o komentář pouze v nezbytných případech. Předpokládejte, že čtenář zdrojového textu zná Javu.
