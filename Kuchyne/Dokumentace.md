@@ -32,7 +32,7 @@ Pro vytvoření receptu je nutná kalkulace surovin a další krok, nákup surov
 ## Podmínky pro dokončení:
 Propojení s datbází 
 
-#Konvence pro psaní a odevzdávání programů v Javě
+# Konvence pro psaní a odevzdávání programů v Javě
 ## 1. Pojmenovávání tříd, proměnných, metod, ...
 1.1 Pro identifikátory (tříd, metod, proměnných, ...) používejte jména popisující jejich význam. Vyhýbejte se zkratkám. Jména by neměla být krátká (minimálně 3 znaky) ani příliš dlouhá (do 16 znaků).
 
@@ -42,7 +42,7 @@ Propojení s datbází
 
 1.4 Názvy konstant se píší celé velkými písmeny, v případě více slov se jednotlivá slova oddělují znakem podtržení, např. MAXIMALNI_POCET.
 
-# 2. Formátování
+## 2. Formátování
 2.1 Na jednom řádku by měl být jeden příkaz, deklarace jedné proměnné.
 
 2.2 Obsah bloku odsaďte vždy o 3 či 4 mezery. V rámci jednoho bloku by měly být všechny příkazy odsazeny stejně.
@@ -69,7 +69,7 @@ Propojení s datbází
 
 2.4 Používejte mezeru před otevírací závorkou a okolo operátorů.
 
-# 3. Dokumentace, komentáře
+## 3. Dokumentace, komentáře
 3.1 Na začátku každé třídy uveďte:
 
 - stručný popis třídy, 
