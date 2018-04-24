@@ -88,7 +88,9 @@ Příklad:
  @version    4.0
  @created    září 2006
  */
-3.2 Před každou metodou by měl být její popis doplněný o popis významu jednotlivých parametrů a návratových hodnot. Příklad:
+3.2 Před každou metodou by měl být její popis doplněný o popis významu jednotlivých parametrů a návratových hodnot. 
+
+Příklad:
 
  /*
   Metoda hledá nejvyšší hodnotu (maximum) v poli celých čísel.
