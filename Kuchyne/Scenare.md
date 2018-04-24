@@ -7,7 +7,7 @@
 ![3](https://raw.githubusercontent.com/kouo00/obrazky/master/3.png)
 ###  SPRAVUJE SUROVINY
 ![4](https://raw.githubusercontent.com/kouo00/obrazky/master/4.png)
-### VYTVÁŘÍ RECEPT
+### VYTVÁŘÍ RECEPTY
 ![5](https://raw.githubusercontent.com/kouo00/obrazky/master/5.png)
 ### VYTVÁŘÍ SUROVINY
 ![6](https://raw.githubusercontent.com/kouo00/obrazky/master/6.png)
@@ -21,3 +21,5 @@
 ![10](https://raw.githubusercontent.com/kouo00/obrazky/master/10.png)
 ### ZOBRAZUJE SUROVINY
 ![11](https://raw.githubusercontent.com/kouo00/obrazky/master/11.png)
+
+Celá dokumentace: https://github.com/vyvm00/Kuchyne/blob/navrh/Kuchyne/Dokumentace.md
