@@ -59,6 +59,9 @@ Pro vytvoření receptu je nutná kalkulace surovin a další krok, nákup surov
 ## Podmínky pro dokončení:
 Propojení s datbází 
 
+
+## Nákresy oken aplikace
+![nákresy oken aplikace, GUI](https://raw.githubusercontent.com/kouo00/obrazky/master/nakres.png)
 # Konvence pro psaní a odevzdávání programů v Javě
 ## 1. Pojmenovávání tříd, proměnných, metod, ...
 1.1 Pro identifikátory (tříd, metod, proměnných, ...) používejte jména popisující jejich význam. Vyhýbejte se zkratkám. Jména by neměla být krátká (minimálně 3 znaky) ani příliš dlouhá (do 16 znaků).
@@ -131,8 +134,6 @@ Příklad:
 3.4 Vlastní kód doplňte o komentář pouze v nezbytných případech. Předpokládejte, že čtenář zdrojového textu zná Javu.
 
 Pro kontrolu konvencí můžete použít program PMD.
-## Nákresy oken aplikace
-![nákresy oken aplikace, GUI](https://raw.githubusercontent.com/kouo00/obrazky/master/nakres.png)
 
 Poznámka: 
 Všechny výše zmíněné návrhy v průběhu zpracovávání semestrální práce mohou variovat a výsledný výstup se může v některých oblastech lišit od plánu.
