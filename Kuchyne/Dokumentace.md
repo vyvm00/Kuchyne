@@ -5,32 +5,45 @@ Bangova Robina | Popis funkcionality aplikace, Use case diagram | Sklad
 Břenek Radim | Use case diagram, Class diagram | Surovina
 Oldřich Koutecký | Nákresy GUI, Struktura databáze | Recept
 Martin Vyvadil | Class diagram, Struktura databáze | Jídlo
+
+Každý člen týmu tedy bude realizovat minimálně jednu část návrhu a implementovat minimálně jednu třídu.
 ## Popis
 Aplikace slouží pro správu receptů, potřebných surovin, skladových zásob, plánování jídel a nákupů surovin.
 ## Aktéři
-*	Správce, má za úkol správu skladu, plánovaní jídel, kalkulace surovin, nákup surovin a evidenci receptu - zobrazení, správu a zrušení receptu. 
-*	Uživatel, smí zobrazodat informace
-## Vstupní podmínky:
-* software 
-* hardware
-* správný chod aplikace
+*	Správce - má za úkol správu skladových zásob, receptů a surovin, vytváření receptů a surovin, přidávání (plánování) jídla a nákup surovin. Taktéž má možnost zobrazit informace o skladových zásobách, receptech, surovinách a plánovaných jídlech.
+*	Uživatel (v praxi kuchař či servírka) – smí pouze zobrazovat informace o skladových zásobách, receptech, surovinách a plánovaných jídlech.
+### UseCase Diagram
+![useCase diagram](https://raw.githubusercontent.com/kouo00/obrazky/master/useCase.png)
 ## Tok:
-1.	Správce naplánuje jídla a následně přidá recepty. 
-2.	Jídla se zkladají se surovin. 
-3.	Sklad obsahuje suroviny. 
-4.	Suroviny se dodávají na sklad. 
-5.	Sklad je spravovaný správcem. 
-6.	Správce spravuje recepty. 
+1.	Správce vytvoří/přidá suroviny a z nich následně sestaví recepty
+2.	Z receptů může správce vytvořit jídla
+3.	Suroviny se nachází na skladě
+4.	V případě nedostatku surovin je správce nakupuje na sklad
+5.	Správce spravuje sklad, suroviny a recepty
+
+Pro vytvoření jídla z receptu je nutná kalkulace surovin a v případě jejich nedostatku následuje další krok, kterým je nákup surovin. Tento úkol má na starosti správce. 
+
+V dalším kroku se vytvářejí recepty. Je potřeba zkontrolovat, či použité suroviny na přípravu receptu se nacházejí v naší databázi a zda je jich dostatek k následnému vytvoření jídla. Uživatel, si pak recepty může zobrazit. Jestli nastane chyba, je možné správou zrušit recept.
+
 
 Pro vytvoření receptu je nutná kalkulace surovin a další krok, nákup surovin. Tyto akce jsou zajišťovány správou surovin, plánovaním jídel. Úkoly má na starosti správce. V dalším kroku se vytvářejí recepty. Je potřeba zkontrolovat, či suroviny byli správně naplánované. Uživatel, si pak recepty může zobrazit. Jestli nastane chyba, je možné správou zrušit recept. Je potřeba zkontrolovat, zda suroviny byly správně naplánované. Uživatel si pak recepty může zobrazit. Pokud nastane chyba, je možné správou zrušit recept.
-*	Nákup surovin 
-*	Plánovaní jídal 
-*	Plánování surovin 
-*	Správa receptů 
-*	Správa skladu 
-*	vytváření receptů 
-*	Zobrazení receptů 
-*	Zrušit recepty 
+*	přidat jídlo
+*	spravovat recept
+*	spravovat skladové zásoby
+*	spravovat suroviny
+*	vytvořit recept
+*	vytvořit suroviny
+*	nakoupit suroviny
+*	zobrazit jídla
+*	zobradit recepty
+*	zobrazit skladové zásoby
+*	zobrazit suroviny
+
+## Class Diagram
+![class diagram](https://raw.githubusercontent.com/kouo00/obrazky/master/classDiagram.png)
+
+## Konceptuální model databáze
+![database](https://raw.githubusercontent.com/kouo00/obrazky/master/database.png)
 ## Podmínky pro dokončení:
 Propojení s datbází 
 
@@ -108,12 +121,6 @@ Příklad:
 Pro kontrolu konvencí můžete použít program PMD.
 ## Nákresy oken aplikace
 ![nákresy oken aplikace, GUI](https://raw.githubusercontent.com/kouo00/obrazky/master/nakres.png)
-## UseCase Diagram
-![useCase diagram](https://raw.githubusercontent.com/kouo00/obrazky/master/useCase.png)
-## Class Diagram
-![class diagram](https://raw.githubusercontent.com/kouo00/obrazky/master/classDiagram.png)
-## Konceptuální model databáze
-![database](https://raw.githubusercontent.com/kouo00/obrazky/master/database.png)
 ## Scénáře
 ![database](https://raw.githubusercontent.com/kouo00/obrazky/master/1.png)
 ![database](https://raw.githubusercontent.com/kouo00/obrazky/master/2.png)
@@ -126,3 +133,6 @@ Pro kontrolu konvencí můžete použít program PMD.
 ![database](https://raw.githubusercontent.com/kouo00/obrazky/master/9.png)
 ![database](https://raw.githubusercontent.com/kouo00/obrazky/master/10.png)
 ![database](https://raw.githubusercontent.com/kouo00/obrazky/master/11.png)
+
+Poznámka: 
+Všechny výše zmíněné návrhy v průběhu zpracovávání semestrální práce mohou variovat a výsledný výstup se může v některých oblastech lišit od plánu.
