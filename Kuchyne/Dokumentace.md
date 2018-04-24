@@ -39,3 +39,15 @@ Propojení s datbází
 ![class diagram](https://raw.githubusercontent.com/kouo00/obrazky/master/classDiagram.png)
 ## Konceptuální model databáze
 ![database](https://raw.githubusercontent.com/kouo00/obrazky/master/database.png)
+## Scénáře
+![database](https://raw.githubusercontent.com/kouo00/obrazky/master/1.png)
+![database](https://raw.githubusercontent.com/kouo00/obrazky/master/2.png)
+![database](https://raw.githubusercontent.com/kouo00/obrazky/master/3.png)
+![database](https://raw.githubusercontent.com/kouo00/obrazky/master/4.png)
+![database](https://raw.githubusercontent.com/kouo00/obrazky/master/5png)
+![database](https://raw.githubusercontent.com/kouo00/obrazky/master/6.png)
+![database](https://raw.githubusercontent.com/kouo00/obrazky/master/7.png)
+![database](https://raw.githubusercontent.com/kouo00/obrazky/master/8.png)
+![database](https://raw.githubusercontent.com/kouo00/obrazky/master/9.png)
+![database](https://raw.githubusercontent.com/kouo00/obrazky/master/10.png)
+![database](https://raw.githubusercontent.com/kouo00/obrazky/master/11.png)
