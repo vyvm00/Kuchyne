@@ -33,7 +33,7 @@ Pro vytvoření receptu je nutná kalkulace surovin a další krok, nákup surov
 Propojení s datbází 
 
 Konvence pro psaní a odevzdávání programů v Javě
-1. Pojmenovávání tříd, proměnných, metod, ...
+ 1. Pojmenovávání tříd, proměnných, metod, ...
 1.1 Pro identifikátory (tříd, metod, proměnných, ...) používejte jména popisující jejich význam. Vyhýbejte se zkratkám. Jména by neměla být krátká (minimálně 3 znaky) ani příliš dlouhá (do 16 znaků).
 
 1.2 Jména tříd začínají velkým písmenem. Pokud se použije více slov, všechna začínají velkým písmenem. Pro označení třídy se obvykle používá podstatné jména v jednotném čísle, které bývá doplněno o přívlastky (např. třídy Student, SeznamStudentu).
