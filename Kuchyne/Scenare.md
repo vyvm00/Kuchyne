@@ -22,4 +22,4 @@
 ### ZOBRAZUJE SUROVINY
 ![11](https://raw.githubusercontent.com/kouo00/obrazky/master/11.png)
 
-Celá dokumentace: https://github.com/vyvm00/Kuchyne/blob/navrh/Kuchyne/Dokumentace.md
+Celá dokumentace dostupná na: https://github.com/vyvm00/Kuchyne/blob/navrh/Kuchyne/Dokumentace.md
