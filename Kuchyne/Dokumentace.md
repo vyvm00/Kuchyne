@@ -78,16 +78,15 @@ Propojení s datbází
 
 Příklad:
 
- /*
-   Třída SeznamAkci - obsahuje seznam přípustných příkazů adventury.
-   Používá se pro rozpoznávání jednotlivých příkazů.
- 
-   Tato třída je součástí jednoduché textové hry.
- 
- @author     Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova
- @version    4.0
- @created    září 2006
- */
+ /** Třída SeznamAkci - obsahuje seznam přípustných příkazů adventury.
+ *  Používá se pro rozpoznávání jednotlivých příkazů.
+ *
+ *  Tato třída je součástí jednoduché textové hry.
+ *
+ *@author     Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova
+ *@version    4.0
+ *@created    září 2006
+ **/
 3.2 Před každou metodou by měl být její popis doplněný o popis významu jednotlivých parametrů a návratových hodnot. Příklad:
 
  /*
