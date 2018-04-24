@@ -16,17 +16,7 @@ Aplikace slouží pro správu receptů, potřebných surovin, skladových zásob
 ## UseCase Diagram
 ![useCase diagram](https://raw.githubusercontent.com/kouo00/obrazky/master/useCase.png)
 ## Scénáře
-![1](https://raw.githubusercontent.com/kouo00/obrazky/master/1.png)
-![2](https://raw.githubusercontent.com/kouo00/obrazky/master/2.png)
-![3](https://raw.githubusercontent.com/kouo00/obrazky/master/3.png)
-![4](https://raw.githubusercontent.com/kouo00/obrazky/master/4.png)
-![5](https://raw.githubusercontent.com/kouo00/obrazky/master/5png)
-![6](https://raw.githubusercontent.com/kouo00/obrazky/master/6.png)
-![7](https://raw.githubusercontent.com/kouo00/obrazky/master/7.png)
-![8](https://raw.githubusercontent.com/kouo00/obrazky/master/8.png)
-![9](https://raw.githubusercontent.com/kouo00/obrazky/master/9.png)
-![10](https://raw.githubusercontent.com/kouo00/obrazky/master/10.png)
-![11](https://raw.githubusercontent.com/kouo00/obrazky/master/11.png)
+Všechny scénáře dostupné na https://github.com/vyvm00/Kuchyne/blob/navrh/Kuchyne/Scenare.md
 ## Tok:
 1.	Správce vytvoří/přidá suroviny a z nich následně sestaví recepty
 2.	Z receptů může správce vytvořit jídla
@@ -54,7 +44,7 @@ V dalším kroku se vytvářejí recepty. Je potřeba zkontrolovat, či použit�
 ## Class Diagram
 ![class diagram](https://raw.githubusercontent.com/kouo00/obrazky/master/classDiagram.png)
 
-## Struktura databáze(fyzický model)
+## Struktura databáze (fyzický model)
 ![database](https://raw.githubusercontent.com/kouo00/obrazky/master/database.png)
 ## Podmínky pro dokončení:
 Propojení s datbází 
