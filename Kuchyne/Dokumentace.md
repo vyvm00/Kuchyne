@@ -1,8 +1,10 @@
 # Tým "Muži v ohni"   - Aplikace Kuchyně
-* Bangova Robina
-* Břenek Radim
-* Koutecký Oldřich
-* Vyvadil Martin
+Člen týmu | Návrh | Třídy
+--- | --- | ---
+Bangova Robina | Popis funkcionality aplikace, Use case diagram | Sklad
+Břenek Radim | Use case diagram, Class diagram | Surovina
+Oldřich Koutecký | Nákresy GUI, Struktura databáze | Recept
+Martin Vyvadil | Class diagram, Struktura databáze | Jídlo
 ## Popis
 Aplikace slouží pro správu receptů, potřebných surovin, skladových zásob, plánování jídel a nákupů surovin.
 ## Aktéři
