@@ -1,9 +1,8 @@
 package entity;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
+
 
 @Entity
 @Table(name = "sklad")
@@ -27,8 +26,22 @@ public class Sklad {
             mappedBy = "sklad",         // mapovani je nastaveno na atributu "sklad" ve tride entity.SurovinaNaSklade
             cascade = CascadeType.ALL
     )
-    private List<SurovinaNaSklade> suroviny = new ArrayList<>();
 
+    private Set<SurovinaNaSklade> suroviny;
+
+
+    /**
+     * Vrati seznam všech surovin dostupych na sklade
+     * @return
+     */
+    public List<Surovina> getAllSuroviny(){
+
+        List<Surovina> ret = new ArrayList<>();
+        for (SurovinaNaSklade sns : suroviny) {
+            ret.add(sns.getSurovina());
+        }
+        return ret;
+    }
 
     /**
      * Pridani suroviny na sklad.
@@ -62,23 +75,15 @@ public class Sklad {
 
 
     public Sklad() {
+        suroviny = new HashSet<>();
     }
 
     public Sklad(String nazev, String adresa, int plocha) {
         this.nazev = nazev;
         this.adresa = adresa;
         this.plocha = plocha;
-    }
 
-    @Override
-    public String toString() {
-        return "entity.Sklad{" +
-                "id=" + id +
-                ", nazev='" + nazev + '\'' +
-                ", adresa='" + adresa + '\'' +
-                ", plocha=" + plocha +
-                ", suroviny=" + suroviny +
-                '}';
+        suroviny = new HashSet<>();
     }
 
     public int getId() {
@@ -113,5 +118,11 @@ public class Sklad {
         this.plocha = plocha;
     }
 
+    public Set<SurovinaNaSklade> getSuroviny() {
+        return suroviny;
+    }
 
+    public void setSuroviny(Set<SurovinaNaSklade> suroviny) {
+        this.suroviny = suroviny;
+    }
 }

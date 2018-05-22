@@ -28,7 +28,8 @@ public class SurovinaNaSklade {
     private int minimalniMnozstvi;
 
 
-    private SurovinaNaSklade() {
+
+    public SurovinaNaSklade() {
     }
 
     public SurovinaNaSklade(Surovina surovina, Sklad sklad) {
@@ -82,10 +83,11 @@ public class SurovinaNaSklade {
     @Embeddable
     public static class SurovinaNaSkladeId implements Serializable {
 
-        @Column(name = "surovina_id")
+        @Column(name = "id_surovina")
         private int idSurovina;
 
-        @Column(name = "sklad_id")
+        @Column(name = "id_sklad")
+      
         private int idSklad;
 
         private SurovinaNaSkladeId() {}

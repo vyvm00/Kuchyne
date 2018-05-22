@@ -1,9 +1,7 @@
 package entity;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 @Entity
 @Table(name = "recept")
@@ -30,8 +28,22 @@ public class Recept {
             mappedBy = "recept", // mapovani je nastaveno na atributu "recetp" ve tride entity.SurovinaVReceptu
             cascade = CascadeType.ALL
     )
-    private List<SurovinaVReceptu> suroviny = new ArrayList<>();
 
+    private Set<SurovinaVReceptu> suroviny;
+
+
+    /**
+     * Vrati seznam všech surovin navázaných na receptu
+     * @return
+     */
+    public List<Surovina> getAllSuroviny(){
+
+        List<Surovina> ret = new ArrayList<>();
+        for (SurovinaVReceptu svr : suroviny) {
+            ret.add(svr.getSurovina());
+        }
+        return ret;
+    }
 
     /**
      * Pridani suroviny na recept.
@@ -46,7 +58,7 @@ public class Recept {
     }
 
     /**
-     * Odstrani surovinu ze receptu.
+     * Odstrani surovinu z receptu.
      * Interne odstrani instanci asociacni tabulky mezi receptem a surovinou
      * a teto instanci zaroven odstrani vazby na recept i produkt
      * @param surovina
@@ -65,6 +77,8 @@ public class Recept {
 
 
     public Recept() {
+
+        suroviny = new HashSet<>();
     }
 
     public Recept(String nazev, String popis, int casPripravy, int cenaPorce) {
@@ -72,6 +86,9 @@ public class Recept {
         this.popis = popis;
         this.casPripravy = casPripravy;
         this.cenaPorce = cenaPorce;
+
+        suroviny = new HashSet<>();
+
     }
 
     public int getId() {
@@ -106,17 +123,15 @@ public class Recept {
         this.casPripravy = casPripravy;
     }
 
-    public List<SurovinaVReceptu> getSuroviny() {
-        return suroviny;
-    }
 
-    public void setSuroviny(List<SurovinaVReceptu> suroviny) {
+    public Set<SurovinaVReceptu> getSuroviny() { return suroviny; }
+
+    public void setSuroviny(Set<SurovinaVReceptu> suroviny) {
         this.suroviny = suroviny;
     }
 
-    public int getCenaPorce() {
-        return cenaPorce;
-    }
+    public int getCenaPorce() { return cenaPorce; }
+
 
     public void setCenaPorce(int cenaPorce) {
         this.cenaPorce = cenaPorce;

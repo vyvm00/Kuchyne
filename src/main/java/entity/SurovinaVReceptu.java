@@ -26,7 +26,7 @@ public class SurovinaVReceptu {
     private int mnozstvi;
 
 
-    private SurovinaVReceptu() {
+    public SurovinaVReceptu() {
     }
 
     public SurovinaVReceptu(Surovina surovina, Recept recept) {
