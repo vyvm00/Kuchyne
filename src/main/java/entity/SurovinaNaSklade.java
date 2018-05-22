@@ -28,6 +28,7 @@ public class SurovinaNaSklade {
     private int minimalniMnozstvi;
 
 
+
     public SurovinaNaSklade() {
     }
 
@@ -86,6 +87,7 @@ public class SurovinaNaSklade {
         private int idSurovina;
 
         @Column(name = "id_sklad")
+      
         private int idSklad;
 
         private SurovinaNaSkladeId() {}

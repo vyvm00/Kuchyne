@@ -11,6 +11,7 @@
         <property name="hibernate.connection.username">user</property>
         <property name="hibernate.connection.password">12345</property>
 
+
         <property name="show_sql">false</property>
 
         <mapping class="entity.Sklad"/>
