@@ -29,10 +29,11 @@
       </AnchorPane>
    </bottom>
    <center>
-      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="receptyTable" prefHeight="200.0" prefWidth="500.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="232.0" text="Název" />
-          <TableColumn minWidth="0.0" prefWidth="105.0" text="Cena" />
+            <TableColumn fx:id="nazevColumn" prefWidth="200.0" text="Název" />
+            <TableColumn fx:id="surovinyColumn" prefWidth="230.0" text="Suroviny" />
+            <TableColumn fx:id="casPripravyColumn" prefWidth="100.0" text="Čas přípravy" />
         </columns>
       </TableView>
    </center>

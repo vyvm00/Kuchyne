@@ -13,28 +13,50 @@ import java.io.IOException;
 /**
  * Abstraktní předek pro všechny controllery.
  * Nese na sobě atribut primaryStage, který si předávají všechny scény/kontrolery
- * Implementuje společnou funkcionalitu více kontrolerů
+ * Implementuje společnou funkcionalitu více kontrolerů (redirecty mezi jednotlivými view)
  */
 public abstract class AbstractController extends BorderPane {
 
     protected Stage primaryStage;
 
     @FXML
-    public void redirectToRecepty() throws IOException {
-        redirectToView("/view/recepty.fxml");
+    public ReceptyController redirectToRecepty() throws IOException {
+        return (ReceptyController) redirectToView("/view/recepty.fxml");
     }
 
     @FXML
-    public void redirectToHome() throws IOException {
-        redirectToView("/view/home.fxml");
+    public HomeController redirectToHome() throws IOException {
+        return (HomeController) redirectToView("/view/home.fxml");
     }
 
     @FXML
-    public void redirectToSklad() throws IOException {
-        redirectToView("/view/sklad.fxml");
+    public SkladController redirectToSklad() throws IOException {
+        return  (SkladController) redirectToView("/view/sklad.fxml");
     }
 
-    protected void redirectToView(String view) throws IOException{
+    @FXML
+    public ReceptDetailController redirectToReceptDetail() throws IOException {
+        return (ReceptDetailController) redirectToView("/view/receptDetail.fxml");
+    }
+
+    @FXML
+    public JidloController redirectToJidlo() throws IOException {
+        return (JidloController) redirectToView("/view/jidlo.fxml");
+    }
+
+    @FXML
+    public NakupController redirectToNakup() throws IOException {
+        return (NakupController) redirectToView("/view/nakup.fxml");
+    }
+
+    /**
+     * Obecna metoda pro presmerovani na zadane view. Vraci AbstractController,
+     * ktery lze nasledne pretypovat na controller odpovidajici danemu view
+     * @param view
+     * @return
+     * @throws IOException
+     */
+    protected AbstractController redirectToView(String view) throws IOException{
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getClass().getResource(view));
         Parent rootLayout = loader.load();
@@ -42,15 +64,11 @@ public abstract class AbstractController extends BorderPane {
         AbstractController controller = loader.getController();
         controller.setPrimaryStage(primaryStage);
 
-        // Show the scene containing the root layout.
         Scene scene = new Scene(rootLayout);
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
 
-
-    public Stage getPrimaryStage() {
-        return primaryStage;
+        return controller;
     }
 
     public void setPrimaryStage(Stage primaryStage) {

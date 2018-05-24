@@ -12,7 +12,7 @@ public class SurovinaVReceptu {
     @EmbeddedId
     private SurovinaVReceptuId id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_surovina")   // navazujeme na cizi klic "id surovina" v tabulce surovina_na_sklade
     @MapsId("idSurovina")               // odkazuje na atribut "idSurovina" slozeneho primarniho klice
     private Surovina surovina;
@@ -106,6 +106,21 @@ public class SurovinaVReceptu {
             return Objects.hash(idSurovina, idRecept);
         }
 
+        public int getIdSurovina() {
+            return idSurovina;
+        }
+
+        public void setIdSurovina(int idSurovina) {
+            this.idSurovina = idSurovina;
+        }
+
+        public int getIdRecept() {
+            return idRecept;
+        }
+
+        public void setIdRecept(int idRecept) {
+            this.idRecept = idRecept;
+        }
     }
 
 }

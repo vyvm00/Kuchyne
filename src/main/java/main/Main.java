@@ -29,6 +29,7 @@ public class Main extends Application {
         this.primaryStage = primaryStage;
 
         initRootLayout();
+        //doHibernateStuff();
     }
 
     /**
@@ -62,50 +63,62 @@ public class Main extends Application {
     }
 
     private void doHibernateStuff(){
+
         SessionFactory sessionsFactory = new Configuration().configure().buildSessionFactory();
         Session session = sessionsFactory.openSession();
         session.beginTransaction();
 
-        Sklad sklad = new Sklad("skladka", "za rohem", 814);
+        Sklad sklad = /*session.get(Sklad.class, 1);/*/new Sklad("Hlavní sklad", "Hospodská 27", 814);
 
         Surovina mouka = new Surovina("mouka","gram");
         Surovina drozdi = new Surovina("drozdi","gram");
         Surovina voda = new Surovina("voda","litr");
-        Surovina pivo = new Surovina("pivo","litr");
+        Surovina pivo = new Surovina("pivo","pinta");
+        Surovina cukr = new Surovina("cukr","lžíce");
+        Surovina sul = new Surovina("sůl","gram");
+        Surovina rajce = new Surovina("rajče","ks");
+        Surovina mrkev = new Surovina("mrkev","ks");
+        Surovina vejce = new Surovina("vejce","ks");
+        Surovina nedostatkove = new Surovina("nedostatkove","ks");
 
-        Recept bramboracka = new Recept("Bramboracka","Uvařit v hrnci",50, 99);
-
-        Jidlo obed = new Jidlo(new Date(), 99, bramboracka);
-
-        sklad.addSurovina(mouka, 200);
-        sklad.addSurovina(drozdi, 5);
-        sklad.addSurovina(voda, 500);
-        sklad.addSurovina(pivo, 120);
-
-        bramboracka.addSurovina(voda, 20);
-        bramboracka.addSurovina(pivo, 30);
+        sklad.addSurovina(mouka, 1000);
+        sklad.addSurovina(drozdi, 1000);
+        sklad.addSurovina(voda, 1000);
+        sklad.addSurovina(pivo, 1000);
+        sklad.addSurovina(cukr, 1000);
+        sklad.addSurovina(sul, 1000);
+        sklad.addSurovina(rajce, 1000);
+        sklad.addSurovina(mrkev, 1000);
+        sklad.addSurovina(vejce, 1000);
+        sklad.addSurovina(nedostatkove, 0);
 
         session.persist(sklad);
-        session.persist(bramboracka);
-        session.persist(obed);
 
+        Recept rizek = new Recept("Kuřecí řízek", "aaa", 1,2);
+        rizek.addSurovina(mouka, 10);
+        rizek.addSurovina(rajce, 5);
+        rizek.addSurovina(sul,1);
+        session.persist(rizek);
 
+        Recept chleba = new Recept("Chleba s máslem", "bbb", 1,2);
+        chleba.addSurovina(voda, 4);
+        chleba.addSurovina(mouka, 40);
+        chleba.addSurovina(sul,3);
+        session.persist(chleba);
 
-        Recept recept = session.get(Recept.class, 1);
-        System.out.println("Suroviny v " + recept.getNazev() + " ");
-        for (Surovina s : recept.getAllSuroviny()) {
-            System.out.println("- " + s.getNazev());
-        }
+        Recept svickova = new Recept("Svickova", "cccc", 1,2);
+        svickova.addSurovina(drozdi, 7);
+        svickova.addSurovina(pivo,32);
+        svickova.addSurovina(cukr,62);
+        svickova.addSurovina(mrkev,3);
+        session.persist(svickova);
 
-        Sklad ss = session.get(Sklad.class,1);
-        System.out.println("Suroviny v " + ss.getNazev() + " ");
-        for (Surovina s : ss.getAllSuroviny()) {
-            System.out.println("- " + s.getNazev());
-        }
-
+        Recept gulas = new Recept("Gulas se sesti", "ddd", 1,2);
+        gulas.addSurovina(nedostatkove, 1);
+        session.persist(gulas);
 
         session.getTransaction().commit();
-        System.exit(0);
+        session.close();
     }
 
 

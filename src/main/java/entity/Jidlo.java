@@ -13,18 +13,16 @@ public class Jidlo {
     private int id;
 
     @Column
-    //@Temporal(TemporalType.DATE)
     private Date datum ;
 
     @Column(name = "pocet_porci")
     private int pocetPorci;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="id_recept")
     private Recept recept;
 
-    public Jidlo() {
-    }
+    public Jidlo() { }
 
     public Jidlo(Date datum, int pocetPorci, Recept recept) {
         this.datum = datum;

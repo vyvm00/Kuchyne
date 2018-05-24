@@ -3,7 +3,6 @@ package entity;
 import javax.persistence.*;
 import java.util.*;
 
-
 @Entity
 @Table(name = "sklad")
 public class Sklad {
@@ -26,7 +25,6 @@ public class Sklad {
             mappedBy = "sklad",         // mapovani je nastaveno na atributu "sklad" ve tride entity.SurovinaNaSklade
             cascade = CascadeType.ALL
     )
-
     private Set<SurovinaNaSklade> suroviny;
 
 
@@ -82,7 +80,6 @@ public class Sklad {
         this.nazev = nazev;
         this.adresa = adresa;
         this.plocha = plocha;
-
         suroviny = new HashSet<>();
     }
 

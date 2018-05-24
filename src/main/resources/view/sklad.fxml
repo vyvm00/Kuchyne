@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkladController">
-   <top>
+    <top>
       <AnchorPane prefHeight="55.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="14.0" layoutY="10.0" text="Sklad:">
@@ -23,16 +23,19 @@
    <bottom>
       <AnchorPane prefHeight="51.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btNakup" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#redirectToNakup" text="Nákup" />
+            <Button fx:id="btNakup" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#nakup" text="Nákup" />
             <Button fx:id="btZpet" layoutX="534.0" layoutY="13.0" mnemonicParsing="false" onAction="#redirectToHome" text="Zpět" />
          </children>
       </AnchorPane>
    </bottom>
    <center>
-      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="surovinyTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="232.0" text="Název" />
-          <TableColumn minWidth="0.0" prefWidth="105.0" text="Množství" />
+          <TableColumn fx:id="nazevColumn" prefWidth="180.0" text="Název" />
+          <TableColumn fx:id="mernaJednotkaColumn" prefWidth="100.0" text="Měrná jednotka" />
+          <TableColumn fx:id="mnozstviColumn" prefWidth="100.0" text="Množství" />
+          <TableColumn fx:id="minMnozstviColumn" prefWidth="100.0" text="min. Množství" />
+          <TableColumn fx:id="dokoupitColumn" prefWidth="100.0" text="Dokoupit" />
         </columns>
       </TableView>
    </center>

@@ -18,7 +18,6 @@ public class Surovina {
     private String mernaJednotka;
 
 
-
     public Surovina() {
     }
 

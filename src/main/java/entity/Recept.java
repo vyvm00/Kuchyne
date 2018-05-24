@@ -28,8 +28,7 @@ public class Recept {
             mappedBy = "recept", // mapovani je nastaveno na atributu "recetp" ve tride entity.SurovinaVReceptu
             cascade = CascadeType.ALL
     )
-
-    private Set<SurovinaVReceptu> suroviny;
+    private List<SurovinaVReceptu> suroviny;
 
 
     /**
@@ -75,10 +74,13 @@ public class Recept {
         }
     }
 
+    @Override
+    public String toString() {
+        return nazev;
+    }
 
     public Recept() {
-
-        suroviny = new HashSet<>();
+        suroviny = new ArrayList<>();
     }
 
     public Recept(String nazev, String popis, int casPripravy, int cenaPorce) {
@@ -86,9 +88,7 @@ public class Recept {
         this.popis = popis;
         this.casPripravy = casPripravy;
         this.cenaPorce = cenaPorce;
-
-        suroviny = new HashSet<>();
-
+        suroviny = new ArrayList<>();
     }
 
     public int getId() {
@@ -123,15 +123,13 @@ public class Recept {
         this.casPripravy = casPripravy;
     }
 
+    public List<SurovinaVReceptu> getSuroviny() { return suroviny; }
 
-    public Set<SurovinaVReceptu> getSuroviny() { return suroviny; }
-
-    public void setSuroviny(Set<SurovinaVReceptu> suroviny) {
+    public void setSuroviny(List<SurovinaVReceptu> suroviny) {
         this.suroviny = suroviny;
     }
 
     public int getCenaPorce() { return cenaPorce; }
-
 
     public void setCenaPorce(int cenaPorce) {
         this.cenaPorce = cenaPorce;

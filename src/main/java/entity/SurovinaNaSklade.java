@@ -1,5 +1,7 @@
 package entity;
 
+import javafx.beans.property.StringProperty;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
@@ -11,7 +13,7 @@ public class SurovinaNaSklade {
     @EmbeddedId
     private SurovinaNaSkladeId id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_surovina")   // navazujeme na cizi klic "id surovina" v tabulce surovina_na_sklade
     @MapsId("idSurovina")               // odkazuje na atribut "idSurovina" slozeneho primarniho klice
     private Surovina surovina;
@@ -87,7 +89,6 @@ public class SurovinaNaSklade {
         private int idSurovina;
 
         @Column(name = "id_sklad")
-      
         private int idSklad;
 
         private SurovinaNaSkladeId() {}
@@ -114,6 +115,21 @@ public class SurovinaNaSklade {
             return Objects.hash(idSurovina, idSklad);
         }
 
+        public int getIdSurovina() {
+            return idSurovina;
+        }
+
+        public void setIdSurovina(int idSurovina) {
+            this.idSurovina = idSurovina;
+        }
+
+        public int getIdSklad() {
+            return idSklad;
+        }
+
+        public void setIdSklad(int idSklad) {
+            this.idSklad = idSklad;
+        }
     }
 
 }

@@ -11,6 +11,8 @@
         <property name="hibernate.connection.username">user</property>
         <property name="hibernate.connection.password">12345</property>
 
+        <!-- umoznuje pouziti sessionFactory.getCurrentSession(); -->
+        <property name="hibernate.current_session_context_class">thread</property>
 
         <property name="show_sql">false</property>
 
