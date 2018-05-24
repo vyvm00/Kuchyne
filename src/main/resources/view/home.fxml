@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="home" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+   <left>
+      <AnchorPane prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btSklad" layoutX="28.0" layoutY="86.0" mnemonicParsing="false" onAction="#redirectToSklad" text="Sklad" />
+            <Button fx:id="btRecepty" layoutX="24.0" layoutY="46.0" mnemonicParsing="false" onAction="#redirectToRecepty" text="Recepty" />
+         </children>
+      </AnchorPane>
+   </left>
+   <top>
+      <AnchorPane prefHeight="52.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btDateMinus" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#dateMinus" text="&lt;&lt;" />
+            <DatePicker fx:id="datePicker" layoutX="419.0" layoutY="13.0" onAction="#dateSelected" prefHeight="25.0" prefWidth="167.0" />
+            <Label fx:id="lblDate" layoutX="47.0" layoutY="8.0" prefHeight="35.0" prefWidth="150.0" text="13.05.2018">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </Label>
+            <Button fx:id="btDatePlus" layoutX="173.0" layoutY="13.0" mnemonicParsing="false" onAction="#datePLus" text="&gt;&gt;" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="jidlaTable" prefHeight="318.0" prefWidth="500.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                 <TableColumn fx:id="receptColumn" prefWidth="230.0" text="Název" />
+                 <TableColumn fx:id="porceColumn" prefWidth="105.0" text="Porcí" />
+                 <TableColumn fx:id="cenaColumn" prefWidth="105.0" text="Cena" />
+              </columns>
+            </TableView>
+            <Button fx:id="btNewJidlo" layoutX="14.0" layoutY="322.0" mnemonicParsing="false" onAction="#newJidlo" text="Přidat menu" />
+            <Button layoutX="376.0" layoutY="322.0" mnemonicParsing="false" onAction="#editJidlo" text="Upravit" AnchorPane.rightAnchor="69.0" />
+            <Button layoutX="431.0" layoutY="322.0" mnemonicParsing="false" onAction="#deleteJidlo" text="Smazat" AnchorPane.leftAnchor="431.0" AnchorPane.rightAnchor="14.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
