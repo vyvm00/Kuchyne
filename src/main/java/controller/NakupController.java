@@ -1,13 +1,12 @@
 package controller;
 
 import entity.SurovinaNaSklade;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import service.PersistenceManager;
 import util.NumberTextField;
+import util.Utils;
 
-import java.io.IOException;
 
 public class NakupController extends AbstractController {
 
@@ -26,15 +25,14 @@ public class NakupController extends AbstractController {
     }
 
     @FXML
-    public void koupit(ActionEvent actionEvent) throws IOException {
+    public void koupit() {
 
         // pokus o precteni hodnoty z textboxu
-        int nakoupitMnozstvi = 0;
-        try { nakoupitMnozstvi = Integer.parseInt(tfMnozstvi.getText()); } catch (Exception e){ }
+        int nakoupitMnozstvi = Utils.tryToParseIntFromNumberTextField(tfMnozstvi);
 
         // aktualizace a ulozeni sns
         surovinaNaSklade.setMnozstvi(surovinaNaSklade.getMnozstvi() + nakoupitMnozstvi);
-        PersistenceManager.save(surovinaNaSklade);
+        PersistenceManager.saveSurovinaNaSklade(surovinaNaSklade);
 
         redirectToSklad();
     }
@@ -43,7 +41,8 @@ public class NakupController extends AbstractController {
     public void setSurovinaNaSklade(SurovinaNaSklade surovinaNaSklade) {
         this.surovinaNaSklade = surovinaNaSklade;
         tfSurovina.setText(surovinaNaSklade.getSurovina().getNazev());
+        // do textboxu se predvyplni mnozstvi zbyvajici k naplneni minimalniho poctu
+        tfMnozstvi.setText(Integer.toString(surovinaNaSklade.getNutnoDokoupit()));
     }
-
 
 }

@@ -26,23 +26,11 @@ public class Recept {
 
     @OneToMany(
             mappedBy = "recept", // mapovani je nastaveno na atributu "recetp" ve tride entity.SurovinaVReceptu
-            cascade = CascadeType.ALL
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
     )
     private List<SurovinaVReceptu> suroviny;
 
-
-    /**
-     * Vrati seznam všech surovin navázaných na receptu
-     * @return
-     */
-    public List<Surovina> getAllSuroviny(){
-
-        List<Surovina> ret = new ArrayList<>();
-        for (SurovinaVReceptu svr : suroviny) {
-            ret.add(svr.getSurovina());
-        }
-        return ret;
-    }
 
     /**
      * Pridani suroviny na recept.
@@ -68,6 +56,7 @@ public class Recept {
 
             if (svr.getRecept().equals(this) && svr.getSurovina().equals(surovina)) {
                 iterator.remove();
+                svr.getRecept().getSuroviny().remove(svr);
                 svr.setSurovina(null);
                 svr.setRecept(null);
             }

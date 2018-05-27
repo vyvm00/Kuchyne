@@ -52,4 +52,29 @@ public class Surovina {
     }
 
 
+    @Override
+    public String toString() {
+        return nazev;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Surovina surovina = (Surovina) o;
+
+        if (id != surovina.id) return false;
+        if (nazev != null ? !nazev.equals(surovina.nazev) : surovina.nazev != null) return false;
+        return mernaJednotka != null ? mernaJednotka.equals(surovina.mernaJednotka) : surovina.mernaJednotka == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (nazev != null ? nazev.hashCode() : 0);
+        result = 31 * result + (mernaJednotka != null ? mernaJednotka.hashCode() : 0);
+        return result;
+    }
 }

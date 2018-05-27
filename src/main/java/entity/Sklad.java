@@ -23,23 +23,11 @@ public class Sklad {
 
     @OneToMany(
             mappedBy = "sklad",         // mapovani je nastaveno na atributu "sklad" ve tride entity.SurovinaNaSklade
-            cascade = CascadeType.ALL
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
     )
-    private Set<SurovinaNaSklade> suroviny;
+    private List<SurovinaNaSklade> suroviny;
 
-
-    /**
-     * Vrati seznam všech surovin dostupych na sklade
-     * @return
-     */
-    public List<Surovina> getAllSuroviny(){
-
-        List<Surovina> ret = new ArrayList<>();
-        for (SurovinaNaSklade sns : suroviny) {
-            ret.add(sns.getSurovina());
-        }
-        return ret;
-    }
 
     /**
      * Pridani suroviny na sklad.
@@ -73,14 +61,14 @@ public class Sklad {
 
 
     public Sklad() {
-        suroviny = new HashSet<>();
+        suroviny = new ArrayList<>();
     }
 
     public Sklad(String nazev, String adresa, int plocha) {
         this.nazev = nazev;
         this.adresa = adresa;
         this.plocha = plocha;
-        suroviny = new HashSet<>();
+        suroviny = new ArrayList<>();
     }
 
     public int getId() {
@@ -115,11 +103,11 @@ public class Sklad {
         this.plocha = plocha;
     }
 
-    public Set<SurovinaNaSklade> getSuroviny() {
+    public List<SurovinaNaSklade> getSuroviny() {
         return suroviny;
     }
 
-    public void setSuroviny(Set<SurovinaNaSklade> suroviny) {
+    public void List(List<SurovinaNaSklade> suroviny) {
         this.suroviny = suroviny;
     }
 }

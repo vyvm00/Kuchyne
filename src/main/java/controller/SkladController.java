@@ -12,7 +12,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import service.PersistenceManager;
 
-import java.io.IOException;
 
 public class SkladController extends AbstractController {
 
@@ -76,14 +75,14 @@ public class SkladController extends AbstractController {
         surovinyTable.setOnMousePressed(event -> {
             if (event.isPrimaryButtonDown() && event.getClickCount() == 2) {
                 selectedSNS = surovinyTable.getSelectionModel().getSelectedItem();
-                try { nakup(); } catch (IOException e) { e.printStackTrace(); }
+                nakup();
             }
         });
 
     }
 
     @FXML
-    public void nakup() throws IOException {
+    public void nakup() {
         if (selectedSNS != null){
             NakupController controller = redirectToNakup();
             controller.setSurovinaNaSklade(selectedSNS);

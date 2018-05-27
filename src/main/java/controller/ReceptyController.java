@@ -53,26 +53,23 @@ public class ReceptyController extends AbstractController {
 
         receptyTable.setOnMousePressed(event -> {
             if (event.isPrimaryButtonDown() && event.getClickCount() == 2) {
-                try {
-                    recept = receptyTable.getSelectionModel().getSelectedItem();
-                    editRecept();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                recept = receptyTable.getSelectionModel().getSelectedItem();
+                editRecept();
             }
         });
 
     }
 
     @FXML
-    private void novyRecept() throws IOException {
-        ReceptDetailController controller = redirectToReceptDetail();
-        controller.setRecept(recept);
+    private void novyRecept() {
+        redirectToReceptDetail();
     }
 
     @FXML
-    private void editRecept() throws IOException {
-        novyRecept();
+    private void editRecept() {
+
+        ReceptDetailController controller = redirectToReceptDetail();
+        controller.setRecept(recept);
     }
 
     /**

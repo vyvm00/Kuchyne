@@ -1,7 +1,5 @@
 package entity;
 
-import javafx.beans.property.StringProperty;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
@@ -29,7 +27,9 @@ public class SurovinaNaSklade {
     @Column(name = "minimalni_mnozstvi")
     private int minimalniMnozstvi;
 
-
+    public int getNutnoDokoupit(){
+        return Math.max(minimalniMnozstvi - mnozstvi, 0);
+    }
 
     public SurovinaNaSklade() {
     }

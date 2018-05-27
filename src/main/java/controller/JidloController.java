@@ -5,15 +5,13 @@ import entity.Recept;
 import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import service.PersistenceManager;
 import util.NumberTextField;
+import util.Utils;
 
-import java.io.IOException;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -60,15 +58,14 @@ public class JidloController extends AbstractController {
 
 
     @FXML
-    public void saveJidlo() throws IOException {
+    public void saveJidlo() {
 
         LocalDate localDate = dpDate.getValue();
         Instant instant = Instant.from(localDate.atStartOfDay(ZoneId.systemDefault()));
         Date date = Date.from(instant);
 
         // pokus o precteni textboxu s poctem porci
-        int pocetPorci = 0;
-        try { pocetPorci = Integer.parseInt(tfPocetPorci.getText()); } catch (Exception e){ }
+        int pocetPorci = Utils.tryToParseIntFromNumberTextField(tfPocetPorci);
 
         // uklada se novy zaznam
         if (jidlo == null){
@@ -80,7 +77,8 @@ public class JidloController extends AbstractController {
             if ( missingSuroviny == null){
                 PersistenceManager.saveJidlo(jidlo);
             } else {
-                showWarning(missingSuroviny);
+                Utils.showAlert("Nedostatek surovin", "Nedostatek surovin", missingSuroviny);
+                return;
             }
 
         // editace stavajiciho zaznamu
@@ -98,25 +96,14 @@ public class JidloController extends AbstractController {
 
                 PersistenceManager.updateJidlo(jidlo, diffPocetPorci);
             } else {
-                showWarning(missingSuroviny);
+                Utils.showAlert("Nedostatek surovin", "Nedostatek surovin", missingSuroviny);
+                return;
             }
 
         }
         redirectToHome();
     }
 
-    /**
-     * Zobrazí dialogové okno s hláškou o chybějících surovinách
-     * @param warning
-     */
-    private void showWarning(String warning){
-        Alert alert = new Alert(Alert.AlertType.WARNING);
-        alert.setTitle("Nedostatek surovin!");
-        alert.setHeaderText("Nedostatek surovin");
-        alert.setContentText(warning);
-
-        alert.showAndWait();
-    }
 
 
     public DatePicker getDpDate() {

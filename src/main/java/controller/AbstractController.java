@@ -20,32 +20,32 @@ public abstract class AbstractController extends BorderPane {
     protected Stage primaryStage;
 
     @FXML
-    public ReceptyController redirectToRecepty() throws IOException {
+    public ReceptyController redirectToRecepty(){
         return (ReceptyController) redirectToView("/view/recepty.fxml");
     }
 
     @FXML
-    public HomeController redirectToHome() throws IOException {
+    public HomeController redirectToHome() {
         return (HomeController) redirectToView("/view/home.fxml");
     }
 
     @FXML
-    public SkladController redirectToSklad() throws IOException {
+    public SkladController redirectToSklad() {
         return  (SkladController) redirectToView("/view/sklad.fxml");
     }
 
     @FXML
-    public ReceptDetailController redirectToReceptDetail() throws IOException {
+    public ReceptDetailController redirectToReceptDetail() {
         return (ReceptDetailController) redirectToView("/view/receptDetail.fxml");
     }
 
     @FXML
-    public JidloController redirectToJidlo() throws IOException {
+    public JidloController redirectToJidlo() {
         return (JidloController) redirectToView("/view/jidlo.fxml");
     }
 
     @FXML
-    public NakupController redirectToNakup() throws IOException {
+    public NakupController redirectToNakup() {
         return (NakupController) redirectToView("/view/nakup.fxml");
     }
 
@@ -56,19 +56,25 @@ public abstract class AbstractController extends BorderPane {
      * @return
      * @throws IOException
      */
-    protected AbstractController redirectToView(String view) throws IOException{
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class.getClass().getResource(view));
-        Parent rootLayout = loader.load();
+    protected AbstractController redirectToView(String view) {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getClass().getResource(view));
+            Parent rootLayout = loader.load();
 
-        AbstractController controller = loader.getController();
-        controller.setPrimaryStage(primaryStage);
+            AbstractController controller = loader.getController();
+            controller.setPrimaryStage(primaryStage);
 
-        Scene scene = new Scene(rootLayout);
-        primaryStage.setScene(scene);
-        primaryStage.show();
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+            primaryStage.show();
 
-        return controller;
+            return controller;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public void setPrimaryStage(Stage primaryStage) {

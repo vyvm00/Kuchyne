@@ -16,8 +16,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import java.util.Date;
-
 
 public class Main extends Application {
 
@@ -29,15 +27,14 @@ public class Main extends Application {
         this.primaryStage = primaryStage;
 
         initRootLayout();
-        //doHibernateStuff();
+        initDummyDB();
     }
 
     /**
-     * Initializes the root layout.
+     * Zobrazí hlavní okno
      */
     public void initRootLayout() {
         try {
-            // Load root layout from fxml file.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/view/home.fxml"));
             Parent rootLayout = loader.load();
@@ -45,7 +42,6 @@ public class Main extends Application {
             HomeController controller = loader.getController();
             controller.setPrimaryStage(primaryStage);
 
-            // Show the scene containing the root layout.
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
             primaryStage.show();
@@ -55,14 +51,11 @@ public class Main extends Application {
         }
     }
 
-
-
-
     public static void main(String[] args) {
         launch(args);
     }
 
-    private void doHibernateStuff(){
+    private void initDummyDB(){
 
         SessionFactory sessionsFactory = new Configuration().configure().buildSessionFactory();
         Session session = sessionsFactory.openSession();
@@ -120,9 +113,5 @@ public class Main extends Application {
         session.getTransaction().commit();
         session.close();
     }
-
-
-
-
 
 }

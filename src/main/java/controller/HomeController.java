@@ -73,13 +73,8 @@ public class HomeController extends AbstractController {
         // dvojklikem redirect na edit jidla
         jidlaTable.setOnMousePressed(event -> {
             if (event.isPrimaryButtonDown() && event.getClickCount() == 2) {
-
-                try {
-                    jidlo = jidlaTable.getSelectionModel().getSelectedItem();
-                    editJidlo();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                jidlo = jidlaTable.getSelectionModel().getSelectedItem();
+                editJidlo();
             }
         });
 
@@ -103,7 +98,7 @@ public class HomeController extends AbstractController {
     }
 
     @FXML
-    public void newJidlo() throws IOException {
+    public void newJidlo() {
         JidloController controller = redirectToJidlo();
 
         LocalDateTime ldtm = LocalDateTime.ofInstant(calendar.toInstant(), ZoneId.systemDefault());
@@ -111,9 +106,9 @@ public class HomeController extends AbstractController {
     }
 
     @FXML
-    public void editJidlo() throws IOException {
+    public void editJidlo() {
         if (jidlo != null){
-            JidloController controller = (JidloController) redirectToView("/view/jidlo.fxml");
+            JidloController controller = redirectToJidlo();
             controller.setJidlo(jidlo);
         }
     }
