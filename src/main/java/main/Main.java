@@ -69,7 +69,7 @@ public class Main extends Application {
         Surovina voda = new Surovina("voda","litr");
         Surovina pivo = new Surovina("pivo","pinta");
         Surovina cukr = new Surovina("cukr","lžíce");
-        Surovina sul = new Surovina("sůl","gram");
+        Surovina sul = new Surovina("sul","gram");
         Surovina rajce = new Surovina("rajče","ks");
         Surovina mrkev = new Surovina("mrkev","ks");
         Surovina vejce = new Surovina("vejce","ks");
@@ -88,13 +88,13 @@ public class Main extends Application {
 
         session.persist(sklad);
 
-        Recept rizek = new Recept("Kuřecí řízek", "aaa", 1,2);
+        Recept rizek = new Recept("Kureci rizek", "aaa", 1,2);
         rizek.addSurovina(mouka, 10);
         rizek.addSurovina(rajce, 5);
         rizek.addSurovina(sul,1);
         session.persist(rizek);
 
-        Recept chleba = new Recept("Chleba s máslem", "bbb", 1,2);
+        Recept chleba = new Recept("Chleba s maslem", "bbb", 1,2);
         chleba.addSurovina(voda, 4);
         chleba.addSurovina(mouka, 40);
         chleba.addSurovina(sul,3);
