@@ -27,7 +27,7 @@ public class Main extends Application {
         this.primaryStage = primaryStage;
 
         initRootLayout();
-        initDummyDB();
+        //initDummyDB(); slouzi jen k uvodnimu naplneni databaze
     }
 
     /**
@@ -63,6 +63,7 @@ public class Main extends Application {
 
         Sklad sklad = /*session.get(Sklad.class, 1);/*/new Sklad("Hlavní sklad", "Hospodská 27", 814);
 
+        
         Surovina mouka = new Surovina("mouka","gram");
         Surovina drozdi = new Surovina("drozdi","gram");
         Surovina voda = new Surovina("voda","litr");
